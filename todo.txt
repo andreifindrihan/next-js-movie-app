@@ -1,0 +1,4 @@
+- navbar styling - className not supported for Link tag - DONE
+- movies / shows - use components for map - DONE
+- use sass
+- use redux

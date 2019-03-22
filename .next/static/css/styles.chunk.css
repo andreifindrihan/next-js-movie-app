@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+* {
+  font-family: "Source Sans Pro", Helvetica, sans-serif; }
+
+.main-header {
+  margin-top: 20px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  margin: 20px 50px; }
+
+.main-container {
+  margin-top: 100px; }
+
+.carousel {
+  width: 70%;
+  margin: 30px auto; }
+
+.carousel-item img {
+  border-radius: 15px;
+  box-shadow: 0px 8px 2px -5px rgba(0, 0, 0, 0.75); }
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px; }
+
+nav {
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0px 8px 2px -5px rgba(0, 0, 0, 0.75); }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%; }
+
+.card img {
+  width: 100%; }
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/
