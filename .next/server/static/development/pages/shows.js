@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -286,6 +286,66 @@ var Navbar = function Navbar() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
+
+/***/ }),
+
+/***/ "./components/Show.js":
+/*!****************************!*\
+  !*** ./components/Show.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/andreifindrihan/FrontEnd/Next-JS-App/components/Show.js";
+
+
+var Show = function Show(props) {
+  var showInfo = props.showInfo,
+      id = props.id;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card mb-3 text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "card-header",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, showInfo.original_name.length > 18 ? showInfo.original_name.substring(0, 18) + '...' : showInfo.original_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-body",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "card-subtitle text-muted",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, showInfo.overview.length > 300 ? showInfo.overview.substring(0, 300) + '...' : showInfo.overview)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://image.tmdb.org/t/p/original/".concat(showInfo.backdrop_path),
+    alt: "Card image",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Show);
 
 /***/ }),
 
@@ -1342,9 +1402,9 @@ module.exports = __webpack_require__(/*! ./dist/client/router */ "./node_modules
 
 /***/ }),
 
-/***/ "./pages/index.js":
+/***/ "./pages/shows.js":
 /*!************************!*\
-  !*** ./pages/index.js ***!
+  !*** ./pages/shows.js ***!
   \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1359,246 +1419,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
-/* harmony import */ var _API_KEY__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../API_KEY */ "./API_KEY.js");
-/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../sass/styles.scss */ "./sass/styles.scss");
-/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_Show__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Show */ "./components/Show.js");
+/* harmony import */ var _API_KEY__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../API_KEY */ "./API_KEY.js");
+/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../sass/styles.scss */ "./sass/styles.scss");
+/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_7__);
 
 
-var _jsxFileName = "/Users/andreifindrihan/FrontEnd/Next-JS-App/pages/index.js";
+var _jsxFileName = "/Users/andreifindrihan/FrontEnd/Next-JS-App/pages/shows.js";
 
 
 
 
 
 
-var Index = function Index(props) {
+
+var Shows = function Shows(props) {
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
     className: "main-header text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     },
     __self: this
-  }, "Popular Movies"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "bd-example",
+  }, "TV Shows List!"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "grid",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    id: "carouselExampleCaptions",
-    className: "carousel slide",
-    "data-ride": "carousel",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
-    className: "carousel-indicators",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    "data-target": "#carouselExampleCaptions",
-    "data-slide-to": "0",
-    className: "active",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    "data-target": "#carouselExampleCaptions",
-    "data-slide-to": "1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    "data-target": "#carouselExampleCaptions",
-    "data-slide-to": "2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "carousel-inner",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "carousel-item active",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
-    src: "https://image.tmdb.org/t/p/original/".concat(props.movieData[0].backdrop_path),
-    className: "d-block w-100",
-    alt: "Movie Poster",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "carousel-caption d-none d-md-block",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h5", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, props.movieData[0].title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, props.movieData[0].overview))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "carousel-item",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
-    src: "https://image.tmdb.org/t/p/original/".concat(props.movieData[1].backdrop_path),
-    className: "d-block w-100",
-    alt: "Movie Poster",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "carousel-caption d-none d-md-block",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h5", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, props.movieData[1].title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, props.movieData[1].overview))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "carousel-item",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
-    src: "https://image.tmdb.org/t/p/original/".concat(props.movieData[2].backdrop_path),
-    className: "d-block w-100",
-    alt: "Movie Poster",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "carousel-caption d-none d-md-block",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h5", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, props.movieData[2].title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, props.movieData[2].overview)))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    className: "carousel-control-prev",
-    href: "#carouselExampleCaptions",
-    role: "button",
-    "data-slide": "prev",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "carousel-control-prev-icon",
-    "aria-hidden": "true",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "sr-only",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }, "Previous")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    className: "carousel-control-next",
-    href: "#carouselExampleCaptions",
-    role: "button",
-    "data-slide": "next",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "carousel-control-next-icon",
-    "aria-hidden": "true",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "sr-only",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: this
-  }, "Next")))));
+  }, props.showInfo.map(function (show) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Show__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      key: show.id,
+      showInfo: show,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    });
+  })));
 };
 
-Index.getInitialProps =
+Shows.getInitialProps =
 /*#__PURE__*/
 Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
 /*#__PURE__*/
@@ -1609,7 +1478,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return fetch("https://api.themoviedb.org/3/movie/popular?api_key=".concat(_API_KEY__WEBPACK_IMPORTED_MODULE_5__["API_KEY"], "&language=en-US&page=1"));
+          return fetch("https://api.themoviedb.org/3/tv/popular?api_key=".concat(_API_KEY__WEBPACK_IMPORTED_MODULE_6__["API_KEY"], "&language=en-US&page=1"));
 
         case 2:
           res = _context.sent;
@@ -1619,7 +1488,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
         case 5:
           data = _context.sent;
           return _context.abrupt("return", {
-            movieData: data.results
+            showInfo: data.results
           });
 
         case 7:
@@ -1629,7 +1498,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
     }
   }, _callee);
 }));
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+/* harmony default export */ __webpack_exports__["default"] = (Shows);
 
 /***/ }),
 
@@ -1644,14 +1513,14 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
 /***/ }),
 
-/***/ 6:
+/***/ 5:
 /*!******************************!*\
-  !*** multi ./pages/index.js ***!
+  !*** multi ./pages/shows.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/andreifindrihan/FrontEnd/Next-JS-App/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/andreifindrihan/FrontEnd/Next-JS-App/pages/shows.js */"./pages/shows.js");
 
 
 /***/ }),
@@ -1877,4 +1746,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=shows.js.map

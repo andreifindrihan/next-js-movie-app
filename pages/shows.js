@@ -10,7 +10,7 @@ const Shows = props => {
             <h1 className="main-header text-center">TV Shows List!</h1>
             <div className="grid">
                 {props.showInfo.map(show => (
-                    <Show showInfo={show} />
+                    <Show key={show.id} showInfo={show} />
                 ))}
             </div>
         </Layout>

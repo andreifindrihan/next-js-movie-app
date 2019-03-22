@@ -223,7 +223,6 @@ var _jsxFileName = "/Users/andreifindrihan/FrontEnd/Next-JS-App/components/Movie
 var Movie = function Movie(props) {
   var movieInfo = props.movieInfo;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    key: movieInfo.id,
     className: "card mb-3 text-center",
     __source: {
       fileName: _jsxFileName,
@@ -1459,6 +1458,7 @@ var Movies = function Movies(props) {
     __self: this
   }, props.movieInfo.map(function (movie) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Movie__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      key: movie.id,
       movieInfo: movie,
       __source: {
         fileName: _jsxFileName,

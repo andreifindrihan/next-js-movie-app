@@ -1,4 +1,4 @@
-((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/movies.js"],{
+((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/shows.js"],{
 
 /***/ "./API_KEY.js":
 /*!********************!*\
@@ -110,68 +110,6 @@ var Layout = function Layout(props) {
 
 /***/ }),
 
-/***/ "./components/Movie.js":
-/*!*****************************!*\
-  !*** ./components/Movie.js ***!
-  \*****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../sass/styles.scss */ "./sass/styles.scss");
-/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/andreifindrihan/FrontEnd/Next-JS-App/components/Movie.js";
-
-
-
-var Movie = function Movie(props) {
-  var movieInfo = props.movieInfo;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card mb-3 text-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "card-header",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, movieInfo.title.length > 18 ? movieInfo.title.substring(0, 18) + '...' : movieInfo.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-body",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
-    className: "card-subtitle text-muted",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, movieInfo.overview.length > 300 ? movieInfo.overview.substring(0, 300) + '...' : movieInfo.overview)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://image.tmdb.org/t/p/original/".concat(movieInfo.backdrop_path),
-    alt: "Card image",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Movie);
-
-/***/ }),
-
 /***/ "./components/Navbar.js":
 /*!******************************!*\
   !*** ./components/Navbar.js ***!
@@ -255,6 +193,66 @@ var Navbar = function Navbar() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
+
+/***/ }),
+
+/***/ "./components/Show.js":
+/*!****************************!*\
+  !*** ./components/Show.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/andreifindrihan/FrontEnd/Next-JS-App/components/Show.js";
+
+
+var Show = function Show(props) {
+  var showInfo = props.showInfo,
+      id = props.id;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card mb-3 text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "card-header",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, showInfo.original_name.length > 18 ? showInfo.original_name.substring(0, 18) + '...' : showInfo.original_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-body",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "card-subtitle text-muted",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, showInfo.overview.length > 300 ? showInfo.overview.substring(0, 300) + '...' : showInfo.overview)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://image.tmdb.org/t/p/original/".concat(showInfo.backdrop_path),
+    alt: "Card image",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Show);
 
 /***/ }),
 
@@ -6578,21 +6576,21 @@ module.exports = __webpack_require__(/*! ./dist/lib/head */ "./node_modules/next
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmovies&absolutePagePath=%2FUsers%2Fandreifindrihan%2FFrontEnd%2FNext-JS-App%2Fpages%2Fmovies.js!./":
-/*!******************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmovies&absolutePagePath=%2FUsers%2Fandreifindrihan%2FFrontEnd%2FNext-JS-App%2Fpages%2Fmovies.js ***!
-  \******************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fshows&absolutePagePath=%2FUsers%2Fandreifindrihan%2FFrontEnd%2FNext-JS-App%2Fpages%2Fshows.js!./":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fshows&absolutePagePath=%2FUsers%2Fandreifindrihan%2FFrontEnd%2FNext-JS-App%2Fpages%2Fshows.js ***!
+  \****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/movies", function() {
-      var page = __webpack_require__(/*! ./pages/movies.js */ "./pages/movies.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/shows", function() {
+      var page = __webpack_require__(/*! ./pages/shows.js */ "./pages/shows.js")
       if(true) {
-        module.hot.accept(/*! ./pages/movies.js */ "./pages/movies.js", function() {
-          if(!next.router.components["/movies"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/movies.js */ "./pages/movies.js")
-          next.router.update("/movies", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/shows.js */ "./pages/shows.js", function() {
+          if(!next.router.components["/shows"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/shows.js */ "./pages/shows.js")
+          next.router.update("/shows", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -10811,10 +10809,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/movies.js":
-/*!*************************!*\
-  !*** ./pages/movies.js ***!
-  \*************************/
+/***/ "./pages/shows.js":
+/*!************************!*\
+  !*** ./pages/shows.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10828,13 +10826,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
-/* harmony import */ var _components_Movie__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Movie */ "./components/Movie.js");
+/* harmony import */ var _components_Show__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Show */ "./components/Show.js");
 /* harmony import */ var _API_KEY__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../API_KEY */ "./API_KEY.js");
 /* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../sass/styles.scss */ "./sass/styles.scss");
 /* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_7__);
 
 
-var _jsxFileName = "/Users/andreifindrihan/FrontEnd/Next-JS-App/pages/movies.js";
+var _jsxFileName = "/Users/andreifindrihan/FrontEnd/Next-JS-App/pages/shows.js";
 
 
 
@@ -10842,7 +10840,7 @@ var _jsxFileName = "/Users/andreifindrihan/FrontEnd/Next-JS-App/pages/movies.js"
 
 
 
-var Movies = function Movies(props) {
+var Shows = function Shows(props) {
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
@@ -10856,17 +10854,17 @@ var Movies = function Movies(props) {
       lineNumber: 10
     },
     __self: this
-  }, "Movie list!"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, "TV Shows List!"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "grid",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
-  }, props.movieInfo.map(function (movie) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Movie__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      key: movie.id,
-      movieInfo: movie,
+  }, props.showInfo.map(function (show) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Show__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      key: show.id,
+      showInfo: show,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 13
@@ -10876,7 +10874,7 @@ var Movies = function Movies(props) {
   })));
 };
 
-Movies.getInitialProps =
+Shows.getInitialProps =
 /*#__PURE__*/
 Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
 /*#__PURE__*/
@@ -10887,7 +10885,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()("https://api.themoviedb.org/3/movie/popular?api_key=".concat(_API_KEY__WEBPACK_IMPORTED_MODULE_6__["API_KEY"], "&language=en-US&page=1"));
+          return fetch("https://api.themoviedb.org/3/tv/popular?api_key=".concat(_API_KEY__WEBPACK_IMPORTED_MODULE_6__["API_KEY"], "&language=en-US&page=1"));
 
         case 2:
           res = _context.sent;
@@ -10897,7 +10895,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
         case 5:
           data = _context.sent;
           return _context.abrupt("return", {
-            movieInfo: data.results
+            showInfo: data.results
           });
 
         case 7:
@@ -10907,18 +10905,18 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
     }
   }, _callee);
 }));
-/* harmony default export */ __webpack_exports__["default"] = (Movies);
+/* harmony default export */ __webpack_exports__["default"] = (Shows);
 
 /***/ }),
 
-/***/ 4:
-/*!**********************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fmovies&absolutePagePath=%2FUsers%2Fandreifindrihan%2FFrontEnd%2FNext-JS-App%2Fpages%2Fmovies.js ***!
-  \**********************************************************************************************************************************************/
+/***/ 5:
+/*!********************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fshows&absolutePagePath=%2FUsers%2Fandreifindrihan%2FFrontEnd%2FNext-JS-App%2Fpages%2Fshows.js ***!
+  \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fmovies&absolutePagePath=%2FUsers%2Fandreifindrihan%2FFrontEnd%2FNext-JS-App%2Fpages%2Fmovies.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmovies&absolutePagePath=%2FUsers%2Fandreifindrihan%2FFrontEnd%2FNext-JS-App%2Fpages%2Fmovies.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fshows&absolutePagePath=%2FUsers%2Fandreifindrihan%2FFrontEnd%2FNext-JS-App%2Fpages%2Fshows.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fshows&absolutePagePath=%2FUsers%2Fandreifindrihan%2FFrontEnd%2FNext-JS-App%2Fpages%2Fshows.js!./");
 
 
 /***/ }),
@@ -10934,5 +10932,5 @@ module.exports = dll_2c2a52d81d538322a0ca;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js","styles"]]]));;
-//# sourceMappingURL=movies.js.map
+},[[5,"static/runtime/webpack.js","styles"]]]));;
+//# sourceMappingURL=shows.js.map

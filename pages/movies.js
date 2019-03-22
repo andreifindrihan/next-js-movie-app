@@ -10,7 +10,7 @@ const Movies = props => {
             <h1 className="main-header text-center">Movie list!</h1>
             <div className="grid">
                 {props.movieInfo.map(movie => (
-                    <Movie movieInfo={movie} />
+                    <Movie key={movie.id} movieInfo={movie} />
                 ))}
             </div>
         </Layout>
